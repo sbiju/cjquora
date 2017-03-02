@@ -34,6 +34,6 @@ urlpatterns = [
     url(r'^$', home, name='home'),
 ]
 
-if conf_settings.DEBUG:
-    urlpatterns += static(conf_settings.STATIC_URL, document_root=conf_settings.STATIC_ROOT)
-    urlpatterns += static(conf_settings.MEDIA_URL, document_root=conf_settings.MEDIA_ROOT)
+# if conf_settings.DEBUG:
+#     urlpatterns += static(conf_settings.STATIC_URL, document_root=conf_settings.STATIC_ROOT)
+#     urlpatterns += static(conf_settings.MEDIA_URL, document_root=conf_settings.MEDIA_ROOT)
