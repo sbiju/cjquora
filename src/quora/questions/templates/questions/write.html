@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <script src="{{ STATIC_URL }}js/questions.js"></script>
+{% endblock head %}
+
+{% block main %}
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        {{ form.errors }}
+        <form id="translControl" action="{% url 'write' %}" method="post" role="form">{% csrf_token %}
+                <p>Title</p>
+                <p><input class="form-control input-lg" id="lang" maxlength="255" name="title" type="text"></p>
+                <p>Content</p>
+                <p><textarea class="form-control" cols="40" id="langu" maxlength="4000" name="content" rows="10"></textarea></p>
+                <p>Tags</p>
+                <p><input class="form-control" id="id_tags" maxlength="255" name="tags" type="text"> <span class="helptext">Use spaces to separate tags</span><input id="id_status" name="status" type="hidden"></p><br>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-lg publish square-label">Ask Quora</button>
+                </div>
+        </form>
+    </div>
+  </div>
+
+
+
+
+{% endblock main %}

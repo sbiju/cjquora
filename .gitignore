@@ -1,0 +1,19 @@
+bin/
+include/
+lib/
+*.py[cod]
+*.sqlite3
+pip-selfcheck.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+env
+.env
+.idea
+*.pyc
+staticfiles
+*.DS_STORE
+.ebextensions
+local
