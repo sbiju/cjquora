@@ -93,22 +93,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'quora.wsgi.application'
 
 
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-# if 'RDS_DB_NAME' in os.environ:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': os.environ['RDS_DB_NAME'],
-#             'USER': os.environ['RDS_USERNAME'],
-#             'PASSWORD': os.environ['RDS_PASSWORD'],
-#             'HOST': os.environ['RDS_HOSTNAME'],
-#             'PORT': os.environ['RDS_PORT'],
-#         }
-#     }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -164,31 +148,3 @@ STATIC_ROOT = PROJECT_DIR.parent.child('staticfiles')
 STATICFILES_DIRS = (
     PROJECT_DIR.child('static'),
 )
-# AWS_ACCESS_KEY_ID = "AKIAI7G2KF22NUG2UKSQ"
-# AWS_SECRET_ACCESS_KEY = "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"
-
-
-# AWS_FILE_EXPIRE = 200
-# AWS_PRELOAD_METADATA = True
-# AWS_QUERYSTRING_AUTH = True
-#
-# DEFAULT_FILE_STORAGE = 'quora.utils.MediaRootS3BotoStorage'
-# STATICFILES_STORAGE = 'quora.utils.StaticRootS3BotoStorage'
-# AWS_STORAGE_BUCKET_NAME = 'quorabucket'
-# S3DIRECT_REGION = 'ap-southeast-1'
-# S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-# MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
-# MEDIA_ROOT = MEDIA_URL
-# STATIC_URL = S3_URL + 'static/'
-# ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-#
-# import datetime
-#
-# two_months = datetime.timedelta(days=61)
-# date_two_months_later = datetime.date.today() + two_months
-# expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
-#
-# AWS_HEADERS = {
-#     'Expires': expires,
-#     'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
-# }
