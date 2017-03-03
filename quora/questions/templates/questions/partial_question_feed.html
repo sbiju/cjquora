@@ -15,19 +15,19 @@
       {{ question.get_num_comments }} Answers
     </span>
   </div>
-  <div class="content">
-    {% with comment=question.get_top_comment %}
-      <div class="info">
-        {% if comment.user.profile.get_picture %}
-          <a href="{% url 'public_profile' comment.user.id %}"><img class="answer-picture round-user" src="{{ comment.user.profile.get_picture }}"></a>
-        {% endif %}
-        {% if comment.user.id %}
-          <a href="{% url 'public_profile' comment.user.id %}" class="answer-user">{{ comment.user.profile.get_private_screen_name }}</a>
-        {% endif %}
-      </div>
-      <p> {{ comment.content|safe }} </p>
-    {% endwith %}
-  </div>
+  <!--<div class="content">-->
+    <!--{% with comment=question.get_top_comment %}-->
+      <!--<div class="info">-->
+        <!--{% if comment.user.profile.get_picture %}-->
+          <!--<a href="{% url 'public_profile' comment.user.id %}"><img class="answer-picture round-user" src="{{ comment.user.profile.get_picture }}"></a>-->
+        <!--{% endif %}-->
+        <!--{% if comment.user.id %}-->
+          <!--<a href="{% url 'public_profile' comment.user.id %}" class="answer-user">{{ comment.user.profile.get_private_screen_name }}</a>-->
+        <!--{% endif %}-->
+      <!--</div>-->
+      <!--<p> {{ comment.content|safe }} </p>-->
+    <!--{% endwith %}-->
+  <!--</div>-->
   {% if question.get_tags %}
     <div class="tags">
       {% for tag in question.get_tags %}
