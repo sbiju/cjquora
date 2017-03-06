@@ -29,8 +29,9 @@ urlpatterns = [
     url(r'^questions/', include('quora.questions.urls')),
     url(r'^search/$', search, name='search'),
     url(r'^(?P<username>[^/]+)/$', profile, name='profile'),
-    url('', include('social.apps.django_app.urls', namespace='social')),
-    url('', include('django.contrib.auth.urls', namespace='auth')),
+    # url('', include('social.apps.django_app.urls', namespace='social')),
+    # url('', include('django.contrib.auth.urls', namespace='auth')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^$', home, name='home'),
 ]
 
